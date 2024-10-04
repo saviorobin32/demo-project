@@ -1,3 +1,4 @@
+
 import { TNote } from "../IHelloworldState";
 
 export interface INoteProps{
@@ -8,3 +9,4 @@ export interface INoteProps{
     updateNote(id:number):Promise<void>
     //testing
 }
+

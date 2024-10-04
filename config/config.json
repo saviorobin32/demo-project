@@ -13,6 +13,7 @@
   },
   "externals": {},
   "localizedResources": {
-    "HelloworldWebPartStrings": "lib/webparts/helloworld/loc/{locale}.js"
+    "HelloworldWebPartStrings": "lib/webparts/helloworld/loc/{locale}.js",
+    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js"
   }
 }

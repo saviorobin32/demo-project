@@ -3,9 +3,11 @@ import { spfi, SPFx } from '@pnp/sp';
 import "@pnp/sp/webs";
 import "@pnp/sp/lists";
 import "@pnp/sp/items";
+import "@pnp/sp/items/get-all";
 
 interface StatesComponentProps {
   onStateChange: (selectedState: string) => void;
+  context: any;
 }
 
 interface StatesComponentState {
@@ -20,7 +22,7 @@ class StatesComponent extends React.Component<StatesComponentProps, StatesCompon
     this.state = {
       states: []
     };
-    this.sp = spfi().using(SPFx(this.context));
+    this.sp = spfi().using(SPFx(this.props.context));
   }
 
   componentDidMount() {
@@ -28,8 +30,14 @@ class StatesComponent extends React.Component<StatesComponentProps, StatesCompon
   }
 
   fetchStates = async () => {
-    const items = await this.sp.web.lists.getByTitle('States').items.get();
-    this.setState({ states: items });
+    try {
+      console.log("Fetching states...");
+      const items = await this.sp.web.lists.getByTitle('States').items.select('Id', 'Title').getAll();
+      console.log("Fetched items:", items);
+      this.setState({ states: items });
+    } catch (error) {
+      console.error("Error fetching states:", error);
+    }
   };
 
   handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
