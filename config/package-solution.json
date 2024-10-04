@@ -1,0 +1,39 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "demo-client-side-solution",
+    "id": "f508ee8a-017f-4f30-acdd-fb1cf1510bde",
+    "version": "1.2409.03.01",
+    "includeClientSideAssets": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.16.1"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "demo description"
+      },
+      "longDescription": {
+        "default": "demo description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "demo Feature",
+        "description": "The feature that activates elements of the demo solution.",
+        "id": "d1a63658-ce52-49bc-8fbf-4d2f8cf2e04a",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/demo.sppkg"
+  }
+}
