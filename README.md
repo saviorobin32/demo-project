@@ -1,6 +1,7 @@
 # demo
 
 ## Summary
+Try updating this file to the local repo.
 
 Short summary on functionality and used technologies.
 
